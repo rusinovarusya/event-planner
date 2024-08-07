@@ -1,0 +1,52 @@
+.button {
+  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+
+  &:nth-child(n) {
+    text-align: center;
+  }
+}
+
+.large {
+  padding: 21px 32px;
+}
+
+.small {
+  padding: 19px 32px;
+}
+
+.primary {
+  color: $white_color;
+  background-color: $dark_color;
+  border-color: $dark_color;
+
+  &:hover {
+    color: $white_color;
+    background-color: $accent_color;
+    border-color: $accent_color;
+  }
+  
+  &:disabled {
+    color: $middle_color;
+    background-color: $light_color;
+    border-color: $light_color;
+  }
+}
+
+.secondary {
+  color: $dark_color;
+  background-color: transparent;
+  border-color: $dark_color;
+
+  &:hover {
+    color: $accent_color;
+    background-color: transparent;
+    border-color: $accent_color;
+  }
+  
+  &:disabled {
+    color: $middle_color;
+    border-color: $light_color;
+  }
+}
