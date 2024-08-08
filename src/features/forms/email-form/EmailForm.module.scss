@@ -1,0 +1,20 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+
+  .inputWrapper {
+    display: grid;
+    grid-template-rows: 60px auto;
+    gap: 4px;
+    height: 81px;
+  }
+
+  .noticeText {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-align: left;
+    color: $middle_color;
+  }
+}

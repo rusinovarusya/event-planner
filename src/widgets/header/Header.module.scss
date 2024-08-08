@@ -1,0 +1,27 @@
+.container {
+  display: grid;
+  grid-template-columns: max-content auto 200px;
+  align-items: end;
+  gap: 60px;
+
+  .titleWrapper {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    .emphasized {
+      color: $accent_color;
+    }
+  }
+
+  .buttonWrapper {
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    gap: 33px;
+
+    .icon {
+      fill: $white_color;
+    }
+  }
+}
