@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  gap: 8px;
+  justify-self: right;
+  align-items: center;
+}
+
+.monthName {
+  width: 184px;
+
+  .month {
+    text-align: center;
+  }
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 8px;
+}
