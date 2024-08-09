@@ -14,7 +14,7 @@ const CalendarGrid = () => {
   const firstMondayDateId = monthWithRest[0].dateId;
   const lastSundayDateId = monthWithRest[monthWithRest.length - 1].dateId;
 
-  const { data, isLoading, isSuccess } = useCalendarGridData(firstMondayDateId, lastSundayDateId);
+  const { data } = useCalendarGridData(firstMondayDateId, lastSundayDateId);
   const events: IEvent[] = data?.data;
 
   const monthWithRestWithEvents = monthWithRest.map((date: IDate) => {

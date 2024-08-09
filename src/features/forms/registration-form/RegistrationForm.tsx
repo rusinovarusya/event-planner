@@ -30,7 +30,7 @@ const RegistrationForm = () => {
   const dispatch = useDispatch();
   const email = useSelector((state: RootState) => state.user.email);
 
-  const [registerUser, { data }] = useRegisterUserMutation();
+  const [registerUser] = useRegisterUserMutation();
   const [loginUser] = useLoginUserMutation();
 
   const submit = () => {

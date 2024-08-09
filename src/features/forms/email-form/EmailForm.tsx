@@ -24,7 +24,7 @@ const EmailForm = () => {
   });
 
   const dispatch = useDispatch();
-  const { data, isError, error } = useExistUserByEmailQuery(getValues().email);
+  const { isError } = useExistUserByEmailQuery(getValues().email);
 
   const submit: SubmitHandler<IEmailForm> = () => {
     const { email } = getValues();

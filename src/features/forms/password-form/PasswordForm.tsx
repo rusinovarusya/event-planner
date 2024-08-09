@@ -27,7 +27,7 @@ const PasswordForm = () => {
   const dispatch = useDispatch();
   const email = useSelector((state: RootState) => state.user.email);
 
-  const [loginUser, { data }] = useLoginUserMutation();
+  const [loginUser] = useLoginUserMutation();
 
   const submit = () => {
     const { password } = getValues();
