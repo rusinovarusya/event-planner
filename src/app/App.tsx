@@ -3,7 +3,7 @@ import MainPage from '../pages/main-page/MainPage';
 
 const App = () => {
   return (
-    <BrowserRouter basename='/event-calendar'>
+    <BrowserRouter basename='/event-planner'>
       <Routes>
         <Route path='/' element={<MainPage />} />
       </Routes>

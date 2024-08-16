@@ -5,7 +5,7 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/event-calendar/',
+  base: '/event-planner/',
   plugins: [
     react(),
     createSvgIconsPlugin({
