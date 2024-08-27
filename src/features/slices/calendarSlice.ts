@@ -1,12 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { createDateIdByObject, createDateIdByPrimitives } from '../model/date/createDateId';
+import { createDateId } from '../model/date/createDateId';
+import moment from 'moment';
 
 export interface CalendarState {
   dateId: string;
 }
 
 const initialState: CalendarState = {
-  dateId: createDateIdByObject(new Date()),
+  dateId: createDateId(moment()),
 }
 
 export const calendarSlice = createSlice({
@@ -14,18 +15,12 @@ export const calendarSlice = createSlice({
   initialState,
   reducers: {
     getPreviousMonthDateId: (state) => {
-      const currentDateObject = new Date(state.dateId);
-      const year = currentDateObject.getFullYear();
-      const month = currentDateObject.getMonth();
-
-      state.dateId = createDateIdByPrimitives(year, month - 1, 1);
+      const currentDateObject = moment(state.dateId);
+      state.dateId = createDateId(currentDateObject.subtract(1, 'month'));
     },
     getNextMonthDateId: (state) => {
-      const currentDateObject = new Date(state.dateId);
-      const year = currentDateObject.getFullYear();
-      const month = currentDateObject.getMonth();
-      
-      state.dateId = createDateIdByPrimitives(year, month + 1, 1);
+      const currentDateObject = moment(state.dateId);
+      state.dateId = createDateId(currentDateObject.add(1, 'month'));
     },
   },
 })

@@ -5,11 +5,12 @@ import Icon from '../../shared/ui/icon/Icon';
 import { getNextMonthDateId, getPreviousMonthDateId } from '../../features/slices/calendarSlice';
 import { RootState } from '../../app/store';
 import { getMonthTitle } from '../../features/model/date/getMonthTitle';
+import moment from 'moment';
 
 const MonthControl = () => {
   const dispatch = useDispatch();
   const dateId = useSelector((state: RootState) => state.calendar.dateId);
-  const dateObject = new Date(dateId);
+  const dateObject = moment(dateId);
   const monthTitle = getMonthTitle(dateObject);
 
   const switchToPreviousMonth = () => {

@@ -1,19 +1,10 @@
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 
-export const createDateIdByObject = (dateObject: Date) => {
-  const year = dateObject.getFullYear();
-  const month = dateObject.getMonth();
-  const date = dateObject.getDate();
+export const createDateId = (dateObject: Moment) => {
+  const year = dateObject.year();
+  const month = dateObject.month();
+  const date = dateObject.date();
 
-  return moment({
-    year,
-    month,
-    date,
-    hour: 14
-  }).utc(true).toISOString();
-}
-
-export const createDateIdByPrimitives = (year: number, month: number, date: number) => {
   return moment({
     year,
     month,

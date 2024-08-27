@@ -1,5 +1,7 @@
-export const getMonthName = (dateObject: Date) => {
-  const currentMonth = dateObject.getMonth();
+import { Moment } from 'moment';
+
+export const getMonthName = (dateObject: Moment) => {
+  const currentMonth = dateObject.month();
   
   switch (currentMonth) {
     case 0: return 'Январь';
